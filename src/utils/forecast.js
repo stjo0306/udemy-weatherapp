@@ -20,7 +20,7 @@ const forecast = (latitude, longitude, callback) => {
       } = body.current;
       const summary = weather_descriptions[0];
       callback(undefined, `${summary} with a temp of ${temperature}, but feels like ${feelslike}.  
-      The wind speed is ${wind_speed} to the ${wind_dir}.  There is a ${precip * 100}% chance of precipitation.`);
+      The wind speed is ${wind_speed} mph to the ${wind_dir}.  There is a ${precip * 100}% chance of precipitation.`);
     }
   });
 };
