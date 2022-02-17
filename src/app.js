@@ -6,6 +6,8 @@ const { geocode } = require('./utils/geocode');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 // Define paths for Express
 const viewsPath = path.join(__dirname, '../templates/views');
 const publicPath = path.join(__dirname, '../public');
@@ -104,7 +106,7 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('you\'ve been served');
 });
 
